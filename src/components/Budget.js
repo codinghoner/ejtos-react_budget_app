@@ -7,7 +7,7 @@ const Budget = () => {
 
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: <input
+            <span>Budget:<input
                         required='required'
                         type='number'
                         id='cost'
@@ -16,8 +16,7 @@ const Budget = () => {
                         onChange={(event) => setCost(event.target.value)}
                         max= {20000}
                         min= {0}
-                        step= {10}
-                        
+                        step = {10}
                         >
                         </input> </span></div>
        

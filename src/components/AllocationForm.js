@@ -7,6 +7,8 @@ const AllocationForm = (props) => {
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+    const [setCurrency] = useState(' ');
+
 
     const submitEvent = () => {
 
@@ -59,6 +61,14 @@ const AllocationForm = (props) => {
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
 
+                    <div className="currency" style={{ marginLeft: '2rem' }}>
+                    <select className="custom-select" id="urrency" onChange={(event) => setCurrency(event.target.value)}>
+                        <option defaultValue name = "Currency">Currency</option>
+                        <option value="Dollar" name="dollar">$ Dollar</option>
+                <option value="Pound" name="pound">£ Pound</option>
+                <option value="Euro" name="euro">€ Euro</option>
+                <option value="Ruppee" name="ruppee">₹ Ruppee</option>
+                </select></div>
                     <input
                         
                         required='required'
@@ -68,20 +78,11 @@ const AllocationForm = (props) => {
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
-                        <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setName(event.target.value)}>
-                        <option defaultValue>Currency</option>
-                        <option value="Dollar" name="Dollar"> $ Dollar</option>
-                        <option value="Pound" name="Pound">£ Pound</option>
-                        <option value="Euro" name="Euro">€ Euro</option>
-                        <option value="Ruppee" name="Ruppee">₹ Ruppee</option>
-                        </select>
-
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
                     </button>
                 </div>
                 </div>
-
         </div>
     );
 };
