@@ -8,7 +8,9 @@ import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
 
+
 const App = () => {
+    
     return (
         <AppProvider>
             <div className='container'>
